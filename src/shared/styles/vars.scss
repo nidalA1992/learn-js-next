@@ -1,16 +1,44 @@
 $colors: (
-  primary: #333333,        // основной текст
-  secondary: #9e9e9e,      // второстепенный текст
-  background: #ffffff,     // фон
-  card-border: #e0e0e0,    // границы карточек / разделители
-  card-bg: #f5f5f5,        // фон карточек / hover
-
-  accent-red: #e63946,     // логотип Wilson
-  accent-orange: #ff7f32,  // активный пункт меню
-  accent-blue: #1e88e5,    // ссылки / CTA
+  primary: #333333,
+  secondary: #9e9e9e,
+  background: #ffffff,
+  card-border: #e0e0e0,
+  card-bg: #f5f5f5,
+  accent-red: #e63946,
+  accent-orange: #ff7f32,
+  accent-blue: #1e88e5,
 );
 
-$layout: (
-  gap: 6px,
-  radius: 4px,
+$space: (
+  0: 0,
+  1: 4px,
+  2: 8px,
+  3: 12px,
+  4: 16px,
+  5: 20px,
+  6: 24px,
+  8: 32px,
+  10: 40px,
+  12: 48px
 );
+
+$radius: (
+  none: 0,
+  sm: 4px,
+  md: 8px,
+  lg: 12px,
+  xl: 16px,
+  round: 50%,
+  pill: 9999px
+);
+
+$typo: (
+  h1: (min: 32px, max: 56px, lh: 1.15, weight: 700, ls: -0.01em),
+  h2: (min: 24px, max: 40px, lh: 1.2,  weight: 600),
+  h3: (min: 20px, max: 32px, lh: 1.25, weight: 600),
+  body: (min: 14px, max: 16px, lh: 1.6, weight: 400),
+  small: (min: 12px, max: 14px, lh: 1.35, weight: 400)
+);
+
+$vw-min: 360px !default;
+$vw-max: 1440px !default;

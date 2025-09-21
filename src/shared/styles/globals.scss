@@ -1,10 +1,12 @@
 @use "mixins";
 @use "vars";
+
 @import "normalize.css";
 
 // 👉 генерируем переменные
 @include mixins.export-css-vars(vars.$colors, 'color');
-@include mixins.export-css-vars(vars.$layout, 'layout');
+@include mixins.export-css-vars(vars.$space, 'space');
+@include mixins.export-css-vars(vars.$radius, 'radius');
 
 *,
 *::before,
