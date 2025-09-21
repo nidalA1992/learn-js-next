@@ -49,5 +49,5 @@
 }
 
 @mixin trans($prop: all) {
-  transition: $prop 200ms ease-in-out;
+  transition: $prop vars.$trans-time ease-in-out;
 }

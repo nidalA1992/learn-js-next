@@ -1,0 +1,31 @@
+@use "@styles/mixins";
+@use "@styles/func";
+
+.logo {
+  @include mixins.typo(h3);
+
+  position: relative;
+  color: func.color(secondary);
+
+  span {
+    color: func.color(accent-orange);
+  }
+
+  a {
+    position: absolute;
+    inset: 0;
+  }
+
+  &,
+  & > span {
+    @include mixins.trans(color);
+  }
+
+  &:hover {
+    color: func.color(primary);
+
+    span {
+      color: func.color(accent-red);
+    }
+  }
+}
