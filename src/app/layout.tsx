@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist_Mono } from 'next/font/google';
-import '@/shared/globals.css';
+import '@/shared/styles/globals.scss';
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',

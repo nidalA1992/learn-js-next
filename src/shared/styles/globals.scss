@@ -1,0 +1,22 @@
+@use "mixins";
+@use "vars";
+@import "normalize.css";
+
+// 👉 генерируем переменные
+@include mixins.export-css-vars(vars.$colors, 'color');
+@include mixins.export-css-vars(vars.$layout, 'layout');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p,
+ul,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+

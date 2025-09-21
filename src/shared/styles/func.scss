@@ -1,0 +1,7 @@
+@use "sass:math";
+@use "vars";
+
+/// Хелпер-функция для использования var(--...)
+@function color($name, $prefix: "color") {
+  @return var(--#{$prefix}-#{$name});
+}
