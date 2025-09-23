@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Montserrat_Alternates } from 'next/font/google';
 
-import { MainLayout } from '@/shared/ui/layouts';
+import { MainLayout } from '@/shared/ui/layouts/MainLayout';
 import { Nav } from '@/shared/ui/components/Nav';
 import { Header } from '@/shared/ui/components/Header';
 import { Logo } from '@/shared/ui/components/Logo';

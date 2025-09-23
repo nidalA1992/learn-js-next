@@ -36,6 +36,7 @@ $typo: (
   h1: (min: 32px, max: 56px, lh: 1.15, weight: 700, ls: -0.01em),
   h2: (min: 24px, max: 40px, lh: 1.2,  weight: 600),
   h3: (min: 20px, max: 32px, lh: 1.25, weight: 600),
+  h4: (min: 18px, max: 28px, lh: 1.25, weight: 600),
   body: (min: 14px, max: 16px, lh: 1.6, weight: 400),
   small: (min: 12px, max: 14px, lh: 1.35, weight: 400),
   tiny: (min: 10px, max: 12px, lh: 1.25, weight: 400),
@@ -43,4 +44,3 @@ $typo: (
 
 $vw-min: 360px !default;
 $vw-max: 1440px !default;
-$trans-time: 300ms;

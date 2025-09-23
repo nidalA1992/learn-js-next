@@ -1,12 +1,13 @@
-@use "mixins";
-@use "vars";
+@use "mixins" as m;
+@use "vars" as v;
+@use "func" as f;
 
 @import "normalize.css";
 
 // 👉 генерируем переменные
-@include mixins.export-css-vars(vars.$colors, 'color');
-@include mixins.export-css-vars(vars.$space, 'space');
-@include mixins.export-css-vars(vars.$radius, 'radius');
+@include m.export-css-vars(v.$colors, 'color');
+@include m.export-css-vars(v.$space, 'space');
+@include m.export-css-vars(v.$radius, 'radius');
 
 *,
 *::before,
@@ -20,5 +21,17 @@ h1,
 h2,
 h3 {
   margin: 0;
+}
+
+a {
+  @include m.typo(body);
+  @include m.trans(color);
+
+  color: f.color(accent-blue);
+  text-decoration: none;
+
+  &:hover {
+    color: f.color(accent-red);
+  }
 }
 

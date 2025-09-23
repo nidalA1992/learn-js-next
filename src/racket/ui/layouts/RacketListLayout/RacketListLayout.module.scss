@@ -1,0 +1,28 @@
+@use "@styles/func" as f;
+@use "@styles/mixins" as m;
+
+.wrapper {}
+
+.container {
+  @include m.container;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: f.space(6);
+}
+
+.title {
+  @include m.typo(h4);
+
+  color: f.color(primary);
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 500px;
+  gap: f.space(6);
+}

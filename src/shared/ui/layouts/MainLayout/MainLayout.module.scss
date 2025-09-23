@@ -1,0 +1,12 @@
+@use "@styles/func" as f;
+
+.wrapper {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  min-height: 100svh;
+  background-color: f.color(background);
+}
+
+.main {
+  padding-block: f.space(12);
+}

@@ -1,31 +1,17 @@
-@use "@styles/func";
-@use "@styles/mixins";
+@use "@styles/func" as f;
 
 .nav {}
 
 .navList {
   display: flex;
   align-items: center;
-  gap: func.space(4);
+  gap: f.space(4);
 
   list-style: none;
 }
 
 .listItem {}
 
-.navLink {
-  @include mixins.typo(small);
-  @include mixins.trans(color);
-
-  text-decoration: none;
-  color: func.color(accent-orange);
-  font-weight: 500;
-
-  &:hover {
-    color: func.color(accent-red);
-  }
-}
-
 .navLinkActive {
-  color: func.color(accent-blue);
+  color: f.color(accent-red) !important;
 }

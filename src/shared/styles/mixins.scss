@@ -48,6 +48,6 @@
   max-width: 90%;
 }
 
-@mixin trans($prop: all) {
-  transition: $prop vars.$trans-time ease-in-out;
+@mixin trans($prop: all, $time: 300ms) {
+  transition: $prop $time ease-in-out;
 }

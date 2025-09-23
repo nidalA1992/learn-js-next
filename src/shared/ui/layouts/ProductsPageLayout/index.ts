@@ -1,0 +1,1 @@
+export { ProductsPageLayout } from './ProductsPageLayout';

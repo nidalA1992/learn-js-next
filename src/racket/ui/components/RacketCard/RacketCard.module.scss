@@ -1,0 +1,47 @@
+@use "@styles/func" as f;
+@use "@styles/mixins" as m;
+
+.wrapper {
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: f.space(2);
+
+  //transition для изображения товара, можно перенести в компонент ProductImage
+  & {
+    div:has(> img) {
+      @include m.trans(border-color);
+
+      img {
+        @include m.trans(transform, 1000ms);
+      }
+    }
+  }
+  &:hover {
+    div:has(> img) {
+      border-color: f.color(accent-orange);
+
+      img {
+        transform: scale(1.1);
+      }
+    }
+
+    .name {
+      color: f.color(primary);
+    }
+  }
+}
+
+.link {
+  position: absolute;
+  inset: 0;
+}
+
+.name {
+  @include m.typo(small);
+  @include m.trans(color);
+
+  color: f.color(secondary);
+  font-weight: 500;
+}

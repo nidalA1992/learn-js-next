@@ -3,3 +3,5 @@ export enum Routes {
   rackets = '/rackets',
   racket = '/racket',
 }
+
+export const TopRackets = [1, 10, 28];

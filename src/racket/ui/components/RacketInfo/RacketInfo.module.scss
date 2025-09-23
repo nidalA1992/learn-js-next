@@ -1,0 +1,27 @@
+@use "@styles/mixins" as m;
+@use "@styles/func" as f;
+
+.brand {
+  @include m.typo(small);
+
+  margin-bottom: f.space(4);
+
+  font-weight: 500;
+  color: f.color(secondary);
+}
+
+.name {
+  @include m.typo(h4);
+
+  margin-bottom: f.space(2w);
+
+  color: f.color(primary);
+}
+
+.descr {
+  @include m.typo(body);
+
+  color: f.color(primary);
+  line-height: 1.4;
+}
+
