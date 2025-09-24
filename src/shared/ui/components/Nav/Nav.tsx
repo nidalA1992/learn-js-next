@@ -18,6 +18,7 @@ export const Nav = () => {
         {Object.entries(Routes).map(([name, route]) =>
           !excludeRoutes.includes(route) ?
             <li key={name} className={styles.navItem}>
+              {/*TODO: сделать отлдельно ссылку с активным состоянием*/}
               <Link href={route} className={clsx(styles.navLink, pathname === route && styles.navLinkActive)}>
                 {name}
               </Link>

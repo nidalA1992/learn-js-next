@@ -1,7 +1,5 @@
 @use "@styles/func" as f;
 
-.nav {}
-
 .navList {
   display: flex;
   align-items: center;
@@ -9,8 +7,6 @@
 
   list-style: none;
 }
-
-.listItem {}
 
 .navLinkActive {
   color: f.color(accent-red) !important;

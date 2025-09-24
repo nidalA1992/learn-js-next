@@ -7,6 +7,4 @@ export const generateStaticParams = async () => {
   }));
 };
 
-export default function RacketPage() {
-  return <RacketDetails />;
-}
+export default RacketDetails;

@@ -1,16 +1,14 @@
-'use client';
-
 import Link from 'next/link';
 
 import { Routes } from '@/shared/consts';
 import { NotFound } from '@/shared/ui/components/NotFound';
 
-import { useGetRacketTopList } from '../../hooks/useGetRacketTopList';
+import { getTopRackets } from '../../utils/getTopRackets';
 import { RacketListLayout } from '../layouts/RacketListLayout';
 import { RacketCard } from '../components/RacketCard';
 
 export const RacketTopList = () => {
-  const { data: rackets } = useGetRacketTopList();
+  const rackets = getTopRackets();
 
   if (!rackets || !rackets.length) {
     return <NotFound />;

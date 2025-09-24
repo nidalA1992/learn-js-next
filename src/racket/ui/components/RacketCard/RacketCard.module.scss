@@ -2,13 +2,12 @@
 @use "@styles/mixins" as m;
 
 .wrapper {
-
   position: relative;
   display: flex;
   flex-direction: column;
   gap: f.space(2);
 
-  //transition для изображения товара, можно перенести в компонент ProductImage
+  //TODO: transition для изображения товара, можно перенести в компонент ProductImage
   & {
     div:has(> img) {
       @include m.trans(border-color);

@@ -1,4 +1,3 @@
-// import { RacketFilterProps } from './RacketFilter.props';
 import styles from './RacketFilter.module.scss';
 
 export const RacketFilter = () => {

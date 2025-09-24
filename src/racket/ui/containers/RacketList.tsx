@@ -1,14 +1,10 @@
-'use client';
-
+import { mock as rackets } from '@/mock';
 import { NotFound } from '@/shared/ui/components/NotFound';
 
-import { useGetRacketList } from '../../hooks/useGetRacketList';
 import { RacketListLayout } from '../layouts/RacketListLayout';
 import { RacketCard } from '../components/RacketCard';
 
 export const RacketList = () => {
-  const { data: rackets } = useGetRacketList();
-
   if (!rackets || !rackets.length) {
     return <NotFound />;
   }
