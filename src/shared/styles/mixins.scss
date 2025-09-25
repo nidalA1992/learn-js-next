@@ -1,0 +1,53 @@
+@use "sass:math";
+
+@use "func";
+@use "vars";
+
+/// Экспорт SCSS map в CSS variables
+@mixin export-css-vars($map, $prefix) {
+  :root {
+    @each $name, $value in $map {
+      --#{$prefix}-#{$name}: #{$value};
+    }
+  }
+}
+
+@mixin fluid($min, $max, $from: vars.$vw-min, $to: vars.$vw-max) {
+  @if $min == $max {
+    font-size: $min;
+  } @else {
+    $slope: math.div(($max - $min), ($to - $from)) * 100;
+    $intercept: $min - $slope * math.div($from, 100);
+    font-size: clamp(#{$min}, calc(#{$intercept} + #{$slope}vw), #{$max});
+  }
+}
+
+@mixin typo($name) {
+  /* токены: все параметры сразу */
+  $conf: map-get(vars.$typo, $name);
+  @if $conf == null {
+    @error "Unknown type token `#{$name}`";
+  }
+
+  $min: map-get($conf, min);
+  $max: map-get($conf, max);
+
+  @include fluid($min, $max);
+
+  line-height: map-get($conf, lh);
+  font-weight: map-get($conf, weight);
+
+  @if map-has-key($conf, ls) {
+    letter-spacing: map-get($conf, ls);
+  }
+}
+
+@mixin container {
+  padding-inline: func.space(2);
+  margin-inline: auto;
+  max-width: 90%;
+}
+
+@mixin trans($prop: all, $time: 300ms) {
+  transition: $prop $time ease-in-out;
+}

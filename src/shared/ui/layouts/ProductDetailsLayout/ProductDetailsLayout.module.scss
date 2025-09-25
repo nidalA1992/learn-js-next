@@ -1,0 +1,15 @@
+@use "@styles/mixins" as m;
+@use "@styles/func" as f;
+
+.container {
+  @include m.container;
+
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  gap: f.space(6);
+}
+
+
+.img {
+  min-height: 600px;
+}

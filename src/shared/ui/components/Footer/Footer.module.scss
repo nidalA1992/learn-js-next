@@ -1,0 +1,22 @@
+@use "@styles/mixins";
+@use "@styles/func";
+
+.footer {
+  padding-block: func.space(10);
+  border-top: 1px solid func.color(card-border);
+  background-color: func.color(card-border);
+}
+
+.container {
+  @include mixins.container;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.copy {
+  @include mixins.typo(tiny);
+
+  color: func.color(secondary);
+}

@@ -1,0 +1,9 @@
+@use "@styles/mixins" as m;
+@use "@styles/func" as f;
+
+.wrapper {
+  @include m.container;
+
+  display: grid;
+  grid-template-columns: 0.15fr 0.85fr;
+}

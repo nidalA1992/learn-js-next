@@ -1,0 +1,22 @@
+@use "@styles/func";
+@use "@styles/mixins";
+
+.header {
+  @include mixins.trans(background-color);
+
+  padding-block: func.space(4);
+  border-bottom: 1px solid func.color(card-border);
+
+  &:hover {
+    background-color: func.color(card-bg);
+  }
+}
+
+.container {
+  @include mixins.container;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+

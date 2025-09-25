@@ -1,0 +1,8 @@
+{
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "quoteProps": "consistent",
+  "experimentalTernaries": true,
+  "tabWidth": 2,
+  "printWidth": 120
+}

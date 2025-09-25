@@ -1,0 +1,13 @@
+@use "@styles/func" as f;
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: f.space(4);
+
+  list-style: none;
+}
+
+.navLinkActive {
+  color: f.color(accent-red) !important;
+}
