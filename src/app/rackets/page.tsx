@@ -1,3 +1,3 @@
-import { RacketList } from '@/racket/ui/containers/RacketList';
+import { RacketsGrid } from '@/racket/ui/containers/RacketsGrid';
 
-export default RacketList;
+export default RacketsGrid;

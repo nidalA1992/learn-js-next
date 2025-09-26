@@ -1,7 +1,7 @@
-import { RacketListLayoutProps } from './RacketListLayout.props';
-import styles from './RacketListLayout.module.scss';
+import { GridLayoutProps } from './GridLayout.props';
+import styles from './GridLayout.module.scss';
 
-export const RacketListLayout = ({ children, controls, title }: RacketListLayoutProps) => {
+export const GridLayout = ({ children, controls, title }: GridLayoutProps) => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.container}>

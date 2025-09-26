@@ -1,6 +1,6 @@
 import React from 'react';
 
-export interface RacketListLayoutProps extends React.PropsWithChildren {
+export interface GridLayoutProps extends React.PropsWithChildren {
   controls?: React.ReactNode;
   title: string;
 }

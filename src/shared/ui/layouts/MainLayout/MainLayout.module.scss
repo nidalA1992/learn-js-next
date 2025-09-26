@@ -8,5 +8,7 @@
 }
 
 .main {
+  display: grid;
+  gap: f.space(12);
   padding-block: f.space(12);
 }

@@ -1,29 +1,22 @@
-'use client';
+import { notFound } from 'next/navigation';
 
-import { useMemo } from 'react';
-import { useParams } from 'next/navigation';
-
-import { NotFound } from '@/shared/ui/components/NotFound';
 import { ProductImg } from '@/shared/ui/components/ProductImg';
 import { ProductDetailsLayout } from '@/shared/ui/layouts/ProductDetailsLayout';
 
-import { getRacketDetail } from '../../utils/getRacketDetail';
+import { getRacketById } from '../../api/getRacketById';
 import { RacketInfo } from '../components/RacketInfo';
 import { RacketDetails as Details } from '../components/RacketDetails';
 
-export const RacketDetails = () => {
-  const params = useParams<{ id: string }>();
-  const racket = useMemo(() => getRacketDetail(params?.id), [params?.id]);
+export const RacketDetails = async ({ id }: { id: string }) => {
+  const { data, ok } = await getRacketById(id);
 
-  if (!racket) {
-    return <NotFound />;
-  }
+  if (!ok || !data?.product) notFound();
 
   return (
     <ProductDetailsLayout
-      info={<RacketInfo racketData={racket} />}
-      img={<ProductImg imgSrc={racket.imageUrl} />}
-      details={<Details racket={racket} />}
+      info={<RacketInfo racketData={data?.product} />}
+      img={<ProductImg imgSrc={data?.product.imageUrl} />}
+      details={<Details racket={data?.product} />}
     />
   );
 };

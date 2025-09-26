@@ -1,0 +1,31 @@
+@use "@styles/func" as f;
+@use "@styles/mixins" as m;
+
+.container {
+  @include m.container;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: f.space(6);
+}
+
+.title {
+  @include m.typo(h4);
+
+  color: f.color(primary);
+}
+
+.list {
+  display: flex;
+  gap: f.space(6);
+  overflow-x: scroll;
+  max-height: 650px;
+  padding-bottom: f.space(4);
+
+  & > * {
+    flex: 0 0 25%;
+  }
+}
