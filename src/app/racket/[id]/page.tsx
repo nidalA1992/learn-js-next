@@ -1,10 +1,6 @@
 import { RacketDetails } from '@/racket/ui/containers/RacketDetails';
-import { getTopRackets } from '@/racket/utils/getTopRackets';
 
-export const generateStaticParams = async () => {
-  return getTopRackets().map((racket) => ({
-    id: String(racket.id),
-  }));
-};
-
-export default RacketDetails;
+export default async function RacketPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  return <RacketDetails id={id} />;
+}

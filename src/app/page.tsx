@@ -1,3 +1,18 @@
-import { RacketTopList } from '@/racket/ui/containers/RacketTopList';
+import { Suspense } from 'react';
 
-export default RacketTopList;
+import { Loader } from '@/shared/ui/components/Loader';
+import { RacketsTopSlider } from '@/racket/ui/containers/RacketsTopSlider';
+import { RacketsPopularSlider } from '@/racket/ui/containers/RacketsPopularSlider';
+
+export default function HomePage() {
+  return (
+    <>
+      <Suspense fallback={<Loader />}>
+        <RacketsTopSlider />
+      </Suspense>
+      <Suspense fallback={<Loader />}>
+        <RacketsPopularSlider />
+      </Suspense>
+    </>
+  );
+}
