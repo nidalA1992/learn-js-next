@@ -1,12 +1,12 @@
-import type { Metadata } from 'next';
-import { Montserrat_Alternates } from 'next/font/google';
+import { Metadata } from 'next';
 
+import { Montserrat_Alternates } from 'next/font/google';
 import { MainLayout } from '@/shared/ui/layouts/MainLayout';
 import { Nav } from '@/shared/ui/components/Nav';
 import { Header } from '@/shared/ui/components/Header';
 import { Logo } from '@/shared/ui/components/Logo';
-import { Footer } from '@/shared/ui/components/Footer';
 
+import { Footer } from '@/shared/ui/components/Footer';
 import '@/shared/styles/globals.scss';
 
 const geistMono = Montserrat_Alternates({
@@ -15,7 +15,7 @@ const geistMono = Montserrat_Alternates({
 });
 
 export const metadata: Metadata = {
-  title: 'Rackets Market',
+  title: { default: 'Rackets Market', template: '%s | Rackets Market' },
   description: 'Learn js education project',
 };
 
