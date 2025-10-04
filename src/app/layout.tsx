@@ -1,12 +1,13 @@
 import { Metadata } from 'next';
-
 import { Montserrat_Alternates } from 'next/font/google';
-import { MainLayout } from '@/shared/ui/layouts/MainLayout';
-import { Nav } from '@/shared/ui/components/Nav';
-import { Header } from '@/shared/ui/components/Header';
-import { Logo } from '@/shared/ui/components/Logo';
+import NextTopLoader from 'nextjs-toploader';
 
+import { Nav } from '@/shared/ui/components/Nav';
+import { Logo } from '@/shared/ui/components/Logo';
+import { Header } from '@/shared/ui/components/Header';
 import { Footer } from '@/shared/ui/components/Footer';
+import { MainLayout } from '@/shared/ui/layouts/MainLayout';
+
 import '@/shared/styles/globals.scss';
 
 const geistMono = Montserrat_Alternates({
@@ -29,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={geistMono.className}>
+        <NextTopLoader />
         <MainLayout header={<Header nav={<Nav />} logo={logo} />} footer={<Footer logo={logo} />}>
           {children}
         </MainLayout>
