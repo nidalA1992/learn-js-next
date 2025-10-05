@@ -10,8 +10,11 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "install": "^0.13.0",
     "next": "15.5.3",
+    "nextjs-toploader": "^3.9.17",
     "normalize.css": "^8.0.1",
+    "npm": "^11.6.1",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },

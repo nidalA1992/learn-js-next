@@ -1,11 +1,12 @@
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
 import { Montserrat_Alternates } from 'next/font/google';
+import NextTopLoader from 'nextjs-toploader';
 
-import { MainLayout } from '@/shared/ui/layouts/MainLayout';
 import { Nav } from '@/shared/ui/components/Nav';
-import { Header } from '@/shared/ui/components/Header';
 import { Logo } from '@/shared/ui/components/Logo';
+import { Header } from '@/shared/ui/components/Header';
 import { Footer } from '@/shared/ui/components/Footer';
+import { MainLayout } from '@/shared/ui/layouts/MainLayout';
 
 import '@/shared/styles/globals.scss';
 
@@ -15,7 +16,7 @@ const geistMono = Montserrat_Alternates({
 });
 
 export const metadata: Metadata = {
-  title: 'Rackets Market',
+  title: { default: 'Rackets Market', template: '%s | Rackets Market' },
   description: 'Learn js education project',
 };
 
@@ -29,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={geistMono.className}>
+        <NextTopLoader />
         <MainLayout header={<Header nav={<Nav />} logo={logo} />} footer={<Footer logo={logo} />}>
           {children}
         </MainLayout>
